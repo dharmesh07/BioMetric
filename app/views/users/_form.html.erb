@@ -1,0 +1,90 @@
+<%= form_for(user) do |f| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table class="table">
+  <tr> 
+  <div class="field">
+    <td><%= f.label "Users ID" %></td>
+    <td><%= f.number_field :user_id %></td>
+    <td>To set the numeric user ID for the user.Maximum 10 characters</td>
+  </div>
+  </tr>
+  <tr>
+  <div class="field">
+    <td><%= f.label :ref_user_id %></td>
+    <td><%= f.number_field :ref_user_id %></td>
+    <td>Reference User ID</td>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name %></td>
+    <td>User Name</td>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <td><%= f.label :user_active %></td>
+    <td><%= f.radio_button :user_active , 1%><span>Active</span><%= f.radio_button :user_active , 0,:checked => true%><span>Inactive</span></td>
+    <td>0 = Inactive , 1 = Active</td>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <td><%= f.label :vip %></td>
+    <td><%= f.radio_button :vip ,1 %><span>Active</span><%= f.radio_button :vip , 0,:checked => true%><span>Inactive</span></td>
+    <td>0 = Inactive , 1 = Active</td>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <td><%= f.label :validity_enable %></td>
+    <td><%= f.radio_button :validity_enable ,1%><span>Active</span><%= f.radio_button :validity_enable , 0,:checked => true%><span>Inactive</span></td>
+    <td>0 = Inactive , 1 = Active</td>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <td><%= f.label :card1 %></td>
+    <td><%= f.text_field :card1 %></td>
+    <td>To set the card value against a user.64 Bits (8 bytes)</td>
+  </div>
+</tr>
+<tr>
+  <div class="field">
+    <td><%= f.label :user_group %></td>
+    <td><%= f.number_field :user_group %></td>
+    <td>To set the user group number. 0 - 999</td>
+  </div>
+</tr>
+<tr>
+<td> Access to </td>
+<td>
+<div class="field">
+  <label class="radio-inline">
+    <input type="radio" name="door" id="room_door2" value=1 checked> Main Door
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="door" id="room_door1" value=2 > Room Door
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="door" id="room_door1" value=3 > Both
+  </label>
+</div>
+</td>
+</tr>
+</table>
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>

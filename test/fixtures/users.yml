@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  ref_user_id: 1
+  name: MyString
+  user_active: 1
+  vip: 1
+  validity_enable: 1
+  card1: MyString
+  user_group: 1
+
+two:
+  user_id: 1
+  ref_user_id: 1
+  name: MyString
+  user_active: 1
+  vip: 1
+  validity_enable: 1
+  card1: MyString
+  user_group: 1

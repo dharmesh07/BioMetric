@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user.user_id %>
+</p>
+
+<p>
+  <strong>Ref user:</strong>
+  <%= @user.ref_user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>User active:</strong>
+  <%= @user.user_active %>
+</p>
+
+<p>
+  <strong>Vip:</strong>
+  <%= @user.vip %>
+</p>
+
+<p>
+  <strong>Validity enable:</strong>
+  <%= @user.validity_enable %>
+</p>
+
+<p>
+  <strong>Card1:</strong>
+  <%= @user.card1 %>
+</p>
+
+<p>
+  <strong>User group:</strong>
+  <%= @user.user_group %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
